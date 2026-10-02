@@ -2,6 +2,11 @@
 
 A small local web app that reads a JSON release report, shows every check, and says whether the release is **READY** or **BLOCKED**, with the specific reasons. Plain HTML, CSS and vanilla JavaScript. It has no dependencies, no build step and makes no network calls.
 
+Supporting documents are in `docs/`:
+- `build-prompt.md`: the specification the AI assistant was given.
+- `build-brief.md`: a record of what was built and verified.
+- `demo-talking-points.md`: the demo script and likely questions.
+
 ## 1. Launch instructions
 
 ### The app
