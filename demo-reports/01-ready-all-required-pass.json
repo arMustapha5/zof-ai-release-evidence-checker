@@ -1,0 +1,9 @@
+{
+  "release": "mobile-app-v2.4.0",
+  "checks": [
+    { "id": "unit-tests", "name": "Unit test suite", "required": true, "status": "passed", "evidence": "ci-run-5531" },
+    { "id": "security-scan", "name": "Dependency security scan", "required": true, "status": "passed", "evidence": "scan-report-2291" },
+    { "id": "accessibility", "name": "Accessibility review", "required": true, "status": "passed", "evidence": "a11y-review-88" },
+    { "id": "release-notes", "name": "Release notes drafted", "required": false, "status": "passed", "evidence": "doc-RN-240" }
+  ]
+}

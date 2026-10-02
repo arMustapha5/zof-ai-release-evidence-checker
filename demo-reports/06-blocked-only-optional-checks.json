@@ -1,0 +1,7 @@
+{
+  "release": "marketing-site-v7.2",
+  "checks": [
+    { "id": "seo", "name": "SEO audit", "required": false, "status": "passed", "evidence": "seo-report-5" },
+    { "id": "lighthouse", "name": "Lighthouse score", "required": false, "status": "passed", "evidence": "lh-run-61" }
+  ]
+}

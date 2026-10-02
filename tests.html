@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Release Evidence Checker – Tests</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #999; padding: 6px; text-align: left; vertical-align: top; }
+    pre { margin: 0; white-space: pre-wrap; font-size: 12px; }
+    .pass { color: #fff; background: #1a7f37; font-weight: bold; }
+    .fail { color: #fff; background: #c62828; font-weight: bold; }
+    #summary { font-size: 20px; font-weight: bold; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <h1>validateRelease tests</h1>
+  <div id="summary"></div>
+  <table>
+    <thead>
+      <tr><th>Test</th><th>Expected</th><th>Actual</th><th>Result</th></tr>
+    </thead>
+    <tbody id="results"></tbody>
+  </table>
+
+  <script src="validation.js"></script>
+  <script src="parsing.js"></script>
+  <script src="tests.js"></script>
+  <script>
+    (function () {
+      function cell(row, text, className) {
+        var td = document.createElement("td");
+        var pre = document.createElement("pre");
+        pre.textContent = text;
+        td.appendChild(pre);
+        if (className) {
+          td.className = className;
+        }
+        row.appendChild(td);
+      }
+
+      function summariseActual(actual) {
+        return JSON.stringify({
+          overall: actual.overall,
+          blockingReasons: actual.blockingReasons,
+          warnings: actual.warnings,
+          invalidData: actual.invalidData
+        }, null, 2);
+      }
+
+      var results = window.runTestCases();
+      var tbody = document.getElementById("results");
+      var passedCount = 0;
+
+      results.forEach(function (result) {
+        var row = document.createElement("tr");
+        cell(row, result.name);
+        cell(row, JSON.stringify(result.expected, null, 2));
+        cell(row, summariseActual(result.actual));
+        if (result.passed) {
+          passedCount++;
+          cell(row, "PASS", "pass");
+        } else {
+          cell(row, "FAIL\n(" + result.failures.join(", ") + ")", "fail");
+        }
+        tbody.appendChild(row);
+      });
+
+      document.getElementById("summary").textContent =
+        passedCount + " of " + results.length + " tests passed";
+    })();
+  </script>
+</body>
+</html>

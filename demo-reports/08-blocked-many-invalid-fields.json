@@ -1,0 +1,10 @@
+{
+  "release": "inventory-v4.3.0",
+  "checks": [
+    { "id": "stock-sync", "name": "Stock sync", "required": "yes", "status": "passed", "evidence": "ci-run-301" },
+    { "id": "pricing", "name": "Pricing rules", "required": true, "status": "PASSED", "evidence": "ci-run-302" },
+    { "id": "stock-sync", "name": "Stock sync (again)", "required": true, "status": "passed", "evidence": "ci-run-303" },
+    { "id": "   ", "name": "", "required": true, "status": "passed", "evidence": "ci-run-304" },
+    "this check is not an object"
+  ]
+}

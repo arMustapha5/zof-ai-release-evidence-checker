@@ -1,0 +1,19 @@
+{
+  "release": "r1",
+  "checks": [
+    {
+      "id": "login",
+      "name": "Customer login",
+      "required": true,
+      "status": "passed",
+      "evidence": "run-1"
+    },
+    {
+      "id": "payments",
+      "name": "Payment workflow",
+      "required": true,
+      "status": "failed",
+      "evidence": "run-2"
+    }
+  ]
+}

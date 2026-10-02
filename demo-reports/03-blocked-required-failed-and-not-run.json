@@ -1,0 +1,9 @@
+{
+  "release": "web-portal-v5.0.0",
+  "checks": [
+    { "id": "login", "name": "Customer login", "required": true, "status": "passed", "evidence": "login-run-410" },
+    { "id": "checkout", "name": "Checkout flow", "required": true, "status": "failed", "evidence": "checkout-run-411" },
+    { "id": "pen-test", "name": "Penetration test", "required": true, "status": "not_run", "evidence": "ticket-SEC-77" },
+    { "id": "copy-review", "name": "Copy review", "required": false, "status": "passed", "evidence": "review-12" }
+  ]
+}

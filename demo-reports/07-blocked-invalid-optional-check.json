@@ -1,0 +1,7 @@
+{
+  "release": "notifications-v2.0.0",
+  "checks": [
+    { "id": "delivery", "name": "Delivery tests", "required": true, "status": "passed", "evidence": "ci-run-1201" },
+    { "id": "templates", "name": "Template preview", "required": false, "status": "skipped", "evidence": 42 }
+  ]
+}

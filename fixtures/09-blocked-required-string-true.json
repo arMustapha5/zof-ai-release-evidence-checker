@@ -1,0 +1,12 @@
+{
+  "release": "r1",
+  "checks": [
+    {
+      "id": "login",
+      "name": "Customer login",
+      "required": "true",
+      "status": "passed",
+      "evidence": "run-1"
+    }
+  ]
+}

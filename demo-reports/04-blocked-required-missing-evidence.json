@@ -1,0 +1,9 @@
+{
+  "release": "reporting-api-v1.9.2",
+  "checks": [
+    { "id": "contract-tests", "name": "API contract tests", "required": true, "status": "passed", "evidence": "ci-run-880" },
+    { "id": "audit-log", "name": "Audit logging", "required": true, "status": "passed" },
+    { "id": "backup", "name": "Backup restore test", "required": true, "status": "passed", "evidence": "    " },
+    { "id": "docs", "name": "API docs updated", "required": false, "status": "passed", "evidence": "" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "release": "r1",
+  "checks": [
+    {
+      "id": "audit",
+      "name": "Audit trail",
+      "required": true,
+      "status": "passed",
+      "evidence": " \t\n "
+    }
+  ]
+}

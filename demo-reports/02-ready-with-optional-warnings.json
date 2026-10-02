@@ -1,0 +1,9 @@
+{
+  "release": "billing-service-v3.1.0",
+  "checks": [
+    { "id": "integration", "name": "Integration tests", "required": true, "status": "passed", "evidence": "ci-run-7002" },
+    { "id": "migration", "name": "Database migration dry run", "required": true, "status": "passed", "evidence": "dry-run-log-19" },
+    { "id": "load-test", "name": "Load test", "required": false, "status": "failed", "evidence": "perf-run-311" },
+    { "id": "visual-diff", "name": "Visual regression check", "required": false, "status": "not_run" }
+  ]
+}

@@ -1,0 +1,4 @@
+release: search-v1.2.0
+checks:
+  - id: indexing
+    status: passed

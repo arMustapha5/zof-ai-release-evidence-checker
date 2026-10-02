@@ -1,0 +1,5 @@
+{
+  "release": "search-v1.2.0",
+  "checks": [
+    { "id": "indexing", "name": "Index rebuild", "required": true, "status": "passed", "evidence": "run-9" },
+  ]
